@@ -1,0 +1,12 @@
+br\inatel\dm112\model\Mensageiro.class
+br\inatel\dm112\LogisticaDm112Application.class
+br\inatel\dm112\model\dao\EntregaRepository.class
+br\inatel\dm112\rest\EntregaServiceRest.class
+br\inatel\dm112\services\EntregaService.class
+br\inatel\dm112\model\dao\PedidoRepository.class
+br\inatel\dm112\model\entities\PedidoEntity.class
+br\inatel\dm112\model\Pedido.class
+br\inatel\dm112\model\entities\EntregaEntity.class
+br\inatel\dm112\interfaces\EntregaServiceInterface.class
+br\inatel\dm112\model\Entrega.class
+br\inatel\dm112\model\MailRequestData.class
