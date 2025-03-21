@@ -25,12 +25,12 @@ public class Mensageiro
 			ResponseEntity<String> response = WebClient.create(url).post().contentType(MediaType.APPLICATION_JSON).bodyValue(mrd).retrieve().toEntity(String.class).block();
 			if (response.getStatusCode().isError())
 			{
-				throw new RuntimeException("Erro HTTP: " + response.getStatusCode() + " - " + response.getBody());
+				throw new RuntimeException("Erro no serviço de e-mail [UtilityDM112]: " + response.getStatusCode() + " - " + response.getBody());
 			}
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Erro HTTP: " + e.getMessage());
+			throw new RuntimeException("Não foi possível conectar ao serviço de e-mail[UtilityDM112]: " + e.getMessage());
 		}
 	}
 }

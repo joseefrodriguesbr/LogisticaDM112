@@ -18,6 +18,10 @@ public class Entrega
 
 	protected EntregaRepository entregaRepository;
 
+	public Entrega()
+	{
+	}
+
 	public Entrega(Integer id, Integer idPedido, String cpfrecebedor, Date datahoraentrega)
 	{
 		this.id = id;

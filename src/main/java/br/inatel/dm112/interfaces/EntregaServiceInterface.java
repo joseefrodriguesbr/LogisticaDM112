@@ -1,13 +1,14 @@
 package br.inatel.dm112.interfaces;
 
-import java.util.List;
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
 
 import br.inatel.dm112.model.Entrega;
-import br.inatel.dm112.model.Pedido;
 
 public interface EntregaServiceInterface
 {
-	public List<Pedido> listarPedidos();
+	public ResponseEntity<Map<String, Object>> listarPedidos();
 
-	public void registrarEntrega(Entrega entrega);
+	public ResponseEntity<Map<String, Object>> registrarEntrega(Entrega entrega);
 }

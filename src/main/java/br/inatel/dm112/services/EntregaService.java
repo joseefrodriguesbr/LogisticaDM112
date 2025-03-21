@@ -34,16 +34,21 @@ public class EntregaService
 	}
 
 	@Transactional
-	public void registrarEntrega(int idPedido, String cpfRecebedor, Date dataHoraEntrega)
+	public void registrarEntrega(int idPedido, String cpfRecebedor, Date dataHoraEntrega) throws Exception
 	{
+		// Consultar pedido
 		Pedido pedido = new Pedido(pedidoRepository);
 		PedidoEntity pedidoEntity = pedido.consultarPedido(idPedido);
+		if (pedidoEntity.getStatus() == Pedido.ENTREGUE)
+		{
+			throw new Exception("Pedido informado já foi entregue.");
+		}
 		pedidoEntity.setStatus(Pedido.ENTREGUE);
 		pedido.atualizarPedido(pedidoEntity);
-		//
+		// Consultar entrega
 		EntregaEntity entregaEntity = new EntregaEntity(pedidoEntity, cpfRecebedor, dataHoraEntrega);
 		entregaEntity = new Entrega(this.entregareRepository).persistirEntrega(entregaEntity);
-		//
+		// Notificar entrega por e-mail
 		notificarEntrega(idPedido, entregaEntity.getId());
 	}
 
