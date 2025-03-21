@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.inatel.dm112</groupId>
+    <artifactId>LogisticaDM112</artifactId>
+    <version>2.7.18</version>
+    <name>LogisticaDM112</name>
+    <description>Projeto Logistica</description>
+
+	<properties>
+	    <java.version>11</java.version>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Definir a codificação -->
+	</properties>
+
+    <dependencies>
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.9</version> <!-- Definindo versão -->
+        </dependency>
+
+        <!-- Spring Boot Starter Data JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.7.9</version> <!-- Definindo versão -->
+        </dependency>
+
+        <!-- Spring Boot DevTools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>2.7.9</version> <!-- Definindo versão -->
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- H2 Database (Banco de dados em memória) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version> <!-- Versão definida do H2 -->
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- SQLite JDBC -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.39.3.0</version> <!-- Versão definida do SQLite JDBC -->
+        </dependency>
+
+        <!-- SQLite Dialect -->
+        <dependency>
+            <groupId>com.github.gwenn</groupId>
+            <artifactId>sqlite-dialect</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
+        <!-- Spring Boot Starter Webflux -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>2.7.9</version> <!-- Definindo versão -->
+        </dependency>
+
+        <!-- Spring Boot Starter (para inicializar o Spring Boot) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.7.9</version> <!-- Definindo versão -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin para recursos de código -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version> <!-- Versão definida -->
+            </plugin>
+
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.9</version> <!-- Definindo versão do plugin -->
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
