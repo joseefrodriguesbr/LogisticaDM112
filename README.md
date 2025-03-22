@@ -44,8 +44,9 @@ curl -v --location --request GET 'http://localhost:8081/LogisticaDM112/api/pedid
 <br/>
 
 <strong>Registrar entrega (requisição POST):</strong><br/>
-Endpoint: http://localhost:8081/LogisticaDM112/api/registrarEntrega<br/>
 A execução com sucesso altera o status do pedido para 3-ENTREGUE.<br/>
+Endpoint: http://localhost:8081/LogisticaDM112/api/registrarEntrega<br/>
+
 
 ```sh
 {
