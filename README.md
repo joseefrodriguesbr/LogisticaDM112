@@ -30,3 +30,25 @@ Repositório : https://github.com/joseefrodriguesbr/LogisticaDM112
 
 <strong>UtilityDM112</strong> - Serviço de envio de e-mail alterado para contemplar envio de mensagem sem anexo<br/> 
 Repositório : https://github.com/joseefrodriguesbr/UtilityDM112
+
+## Testes:
+
+### Projeto LogisticaDM112 (porta 8081):
+
+<strong>Listar pedidos (requisição GET):</strong><br/>
+```
+curl -v --location --request GET 'http://localhost:8081/LogisticaDM112/api/pedidos'
+
+<br/>
+
+<strong>Registrar entrega (requisição POST):</strong><br/>
+endpoint: http://localhost:8081/LogisticaDM112/api/registrarEntrega<br/>
+
+```
+{
+  "idPedido": 2,
+  "cpfrecebedor": "12345678900",
+  "datahoraentrega": "2025-03-19T15:30:00"
+}
+
+
