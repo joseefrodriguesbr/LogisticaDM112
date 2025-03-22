@@ -36,19 +36,22 @@ Repositório : https://github.com/joseefrodriguesbr/UtilityDM112
 ### Projeto LogisticaDM112 (porta 8081):
 
 <strong>Listar pedidos (requisição GET):</strong><br/>
-```
-curl -v --location --request GET 'http://localhost:8081/LogisticaDM112/api/pedidos'
+Retorna os pedidos com status 2-PENDENTE(não pago) e 3-CONFIRMADO(pago). <br/>
 
+```sh
+curl -v --location --request GET 'http://localhost:8081/LogisticaDM112/api/pedidos'
+```
 <br/>
 
 <strong>Registrar entrega (requisição POST):</strong><br/>
-endpoint: http://localhost:8081/LogisticaDM112/api/registrarEntrega<br/>
+Endpoint: http://localhost:8081/LogisticaDM112/api/registrarEntrega<br/>
+A execução com sucesso altera o status do pedido para 3-ENTREGUE.<br/>
 
-```
+```sh
 {
   "idPedido": 2,
   "cpfrecebedor": "12345678900",
   "datahoraentrega": "2025-03-19T15:30:00"
 }
-
+```
 
