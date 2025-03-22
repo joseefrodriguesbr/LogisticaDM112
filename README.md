@@ -46,7 +46,7 @@ curl -v --location --request GET 'http://localhost:8081/LogisticaDM112/api/pedid
 <strong>Registrar entrega (requisição POST):</strong><br/>
 A execução com sucesso altera o status do pedido para 3-ENTREGUE.<br/>
 Endpoint: http://localhost:8081/LogisticaDM112/api/registrarEntrega<br/>
-<strong>Observação:</strong> A execução com sucesso invoca o serviço de e-mail disponível no projeto UtilityDM112, configurado na porta 7071 <br/>
+<strong>Observação:</strong> A execução com sucesso invoca o serviço de e-mail disponível no projeto UtilityDM112, configurado na porta 7071, utilizando o GMail <br/>
 
 
 
